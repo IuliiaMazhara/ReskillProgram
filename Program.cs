@@ -12,9 +12,35 @@ namespace ReskillProgram
 {
     internal class Program
     {
+
+        static string readLine() {
+
+            Console.WriteLine("Please enter the string");           
+            return  Console.ReadLine();
+
+        }
+        static string joinLine(string firstLine, string secondLine)
+        {
+
+            Console.WriteLine("The joine line is " + firstLine + secondLine);
+            return firstLine + secondLine;
+
+        }
+
+        static void removeLine(string originalLine, string toBeRemovedLine)
+        {
+
+             Console.WriteLine("The string excluded the last entered one is " + originalLine.Replace(toBeRemovedLine, "")); 
+
+        }
         static void Main(string[] args)
         {
-           
+
+            string joinedLine = joinLine(readLine(), readLine());                     
+            string toBeRemoved = readLine();
+            removeLine(joinedLine, toBeRemoved);
+
+
         }
     }
 }
