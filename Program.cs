@@ -22,7 +22,7 @@ namespace ReskillProgram
         static string joinLine(string firstLine, string secondLine)
         {
 
-            Console.WriteLine("The joine line is " + firstLine + secondLine);
+            Console.WriteLine("The joined line is " + firstLine + secondLine);
             return firstLine + secondLine;
 
         }
@@ -35,8 +35,8 @@ namespace ReskillProgram
         }
         static void Main(string[] args)
         {
-
-            string joinedLine = joinLine(readLine(), readLine());                     
+            string fromMainMethod = args[0];
+            string joinedLine = joinLine(fromMainMethod, readLine());                     
             string toBeRemoved = readLine();
             removeLine(joinedLine, toBeRemoved);
 
